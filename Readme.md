@@ -13,3 +13,7 @@ Para insertar 5 registros ponemos esta query
 Para comprobarlo le damos a ver todas las tablas en EmpresasFCT
 ![ej2-2](imgs/ej2-2.png)
 
+## Apartado 3
+
+En el apartado de query escribimos esto
+![ej3](imgs/ej3.png)
