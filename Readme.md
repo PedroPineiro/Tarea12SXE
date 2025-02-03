@@ -17,3 +17,8 @@ Para comprobarlo le damos a ver todas las tablas en EmpresasFCT
 
 En el apartado de query escribimos esto
 ![ej3](imgs/ej3.png)
+
+## Apartado 4
+
+En el apartado de query escribimos esto
+![ej4](imgs/ej4.png)
