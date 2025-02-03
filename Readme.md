@@ -22,3 +22,7 @@ En el apartado de query escribimos esto
 
 En el apartado de query escribimos esto
 ![ej4](imgs/ej4.png)
+
+## Apartado 5
+
+![ej4](imgs/ej5.png)
