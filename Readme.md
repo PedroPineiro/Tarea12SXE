@@ -72,11 +72,16 @@ WHERE "email" LIKE '%@bilbao.example.com';
 
 ## Apartado 8
 
+Primero vemos los contactos en Odoo
+![ej8-2](imgs/ej8-2.png)
+
+Borramos 
 ```sql
 DELETE FROM res_partner
-WHERE "company_id" IN (
-    SELECT "id" FROM res_company WHERE "name" = 'Ready Mat'
-)
-AND "is_company" = FALSE; 
+WHERE commercial_company_name = 'Ready Mat'
+AND "is_company" = FALSE;
 ```
 ![ej8](imgs/ej8.png)
+
+Comprobamos que se han borrado correctamente
+![ej8-3](imgs/ej8-3.png)
