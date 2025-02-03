@@ -69,3 +69,14 @@ SET "email" = replace("email", '@bilbao.example.com', '@bilbao.bizkaia.eus')
 WHERE "email" LIKE '%@bilbao.example.com';
 ```
 ![ej7](imgs/ej7.png)
+
+## Apartado 8
+
+```sql
+DELETE FROM res_partner
+WHERE "company_id" IN (
+    SELECT "id" FROM res_company WHERE "name" = 'Ready Mat'
+)
+AND "is_company" = FALSE; 
+```
+![ej8](imgs/ej8.png)
