@@ -25,7 +25,7 @@ select * from "EmpresasFCT" order by "fechaContacto" desc;
 
 ```sql
 select "name", "city", "commercial_company_name" 
-from public.res_partner 
+from res_partner 
 where "city" = 'Tracy'
 order by "name";
 ```
@@ -39,7 +39,7 @@ SELECT DISTINCT ON ("invoice_partner_display_name")
     "name", 
     "invoice_date", 
     "amount_untaxed"
-FROM public.account_move
+FROM account_move
 WHERE "move_type" = 'out_refund'
 ORDER BY "invoice_partner_display_name", "invoice_date" DESC;
 ```
