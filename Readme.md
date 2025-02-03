@@ -65,8 +65,8 @@ ORDER BY SUM("amount_untaxed") DESC;
 
 ```sql
 UPDATE res_partner
-SET "email" = replace("email", '@bilbao.example.com', '@bilbao.bizkaia.eus')
-WHERE "email" LIKE '%@bilbao.example.com';
+SET email = '@bilbao.bizkaia.eus'
+WHERE email like '%@bilbao.example.com';
 ```
 ![ej7](imgs/ej7.png)
 
