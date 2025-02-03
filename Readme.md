@@ -43,4 +43,29 @@ FROM public.account_move
 WHERE "move_type" = 'out_refund'
 ORDER BY "invoice_partner_display_name", "invoice_date" DESC;
 ```
-![ej4](imgs/ej5.png)
+![ej5](imgs/ej5.png)
+
+## Apartado 6
+
+```sql
+SELECT 
+    "invoice_partner_display_name", 
+    COUNT("id"), 
+    SUM("amount_untaxed")
+FROM account_move
+WHERE "move_type" = 'out_invoice'  -- Solo facturas de venta
+AND "state" = 'posted'  -- Solo facturas confirmadas
+GROUP BY "invoice_partner_display_name"
+HAVING COUNT("id") > 2  -- Empresas con más de 2 facturas
+ORDER BY SUM("amount_untaxed") DESC;
+```
+![ej6](imgs/ej6.png)
+
+## Apartado 7
+
+```sql
+UPDATE res_partner
+SET "email" = replace("email", '@bilbao.example.com', '@bilbao.bizkaia.eus')
+WHERE "email" LIKE '%@bilbao.example.com';
+```
+![ej7](imgs/ej7.png)
