@@ -16,13 +16,31 @@ Para comprobarlo le damos a ver todas las tablas en EmpresasFCT
 ## Apartado 3
 
 En el apartado de query escribimos esto
+```sql
+select * from "EmpresasFCT" order by "fechaContacto" desc;
+```
 ![ej3](imgs/ej3.png)
 
 ## Apartado 4
 
-En el apartado de query escribimos esto
+```sql
+select "name", "city", "commercial_company_name" 
+from public.res_partner 
+where "city" = 'Tracy'
+order by "name";
+```
 ![ej4](imgs/ej4.png)
 
 ## Apartado 5
 
+```sql
+SELECT DISTINCT ON ("invoice_partner_display_name") 
+    "invoice_partner_display_name", 
+    "name", 
+    "invoice_date", 
+    "amount_untaxed"
+FROM public.account_move
+WHERE "move_type" = 'out_refund'
+ORDER BY "invoice_partner_display_name", "invoice_date" DESC;
+```
 ![ej4](imgs/ej5.png)
